@@ -1,0 +1,14 @@
+/* SAFE MOBILE-FIRST CSS (won't skew) */
+html, body { margin:0; padding:0; font-family: Georgia, serif; }
+body { padding: 14px; }
+img { max-width: 100%; height: auto; }
+section, header, nav, main, footer, .panel, .card {
+  width: 100%;
+  max-width: 980px;
+  margin: 0 auto 14px auto;
+}
+button, .btn {
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,.15);
+}
