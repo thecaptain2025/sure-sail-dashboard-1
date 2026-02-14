@@ -1,0 +1,217 @@
+/* =========================
+   GLOBAL FOUNDATION
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia", serif;
+  background: linear-gradient(180deg, #e6d7b8 0%, #d9c7a1 100%);
+  color: #1a1a1a;
+}
+
+/* =========================
+   MAIN LAYOUT WRAPPER
+========================= */
+
+.container {
+  width: min(1200px, 96vw);
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 0;
+}
+
+.run-controls {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button {
+  background: #214f4f;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* =========================
+   PANELS (ALL BOXES)
+========================= */
+
+.panel {
+  background: linear-gradient(180deg, #f2e4c5 0%, #e7d5b0 100%);
+  border: 3px solid rgba(0,0,0,0.2);
+  border-radius: 18px;
+  padding: clamp(16px, 2vw, 24px);
+  margin-bottom: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  transition: 0.3s ease;
+}
+
+/* =========================
+   STAGE LAYOUT GRID
+========================= */
+
+.stage-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   OVERLAY SYSTEM
+========================= */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: none;
+  place-items: center;
+  padding: 16px;
+  z-index: 999;
+}
+
+.overlay.show {
+  display: grid;
+}
+
+.overlayCard {
+  width: clamp(320px, 96vw, 1100px);
+  border-radius: 18px;
+  border: 3px solid rgba(0,0,0,0.25);
+  background: linear-gradient(180deg, #f2e4c5 0%, #e7d5b0 100%);
+  padding: clamp(18px, 2vw, 26px);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.25);
+  animation: fadeIn 0.3s ease;
+}
+
+.overlayCard h3 {
+  margin: 0 0 12px 0;
+}
+
+.overlayBody {
+  line-height: 1.5;
+}
+
+/* =========================
+   NEON EXECUTION MODE
+========================= */
+
+.neon-active {
+  box-shadow:
+    0 0 12px rgba(0, 255, 200, 0.6),
+    0 0 24px rgba(0, 255, 200, 0.4),
+    0 0 48px rgba(0, 255, 200, 0.2);
+  border-color: rgba(0, 255, 200, 0.7);
+}
+
+/* =========================
+   PROGRESS BARS
+========================= */
+
+.progress-bar {
+  height: 14px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #f7d46a, #e3b94d);
+  width: 50%;
+  transition: width 0.4s ease;
+}
+
+/* =========================
+   LOCKED STAGE STYLE
+========================= */
+
+.locked {
+  border: 2px dashed rgba(0,0,0,0.3);
+  background: rgba(255,255,255,0.3);
+}
+
+/* =========================
+   NAVIGATION SIDEBAR
+========================= */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.nav-btn {
+  padding: 12px;
+  border-radius: 14px;
+  border: 2px solid rgba(0,0,0,0.2);
+  background: rgba(255,255,255,0.35);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: rgba(255,255,255,0.6);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* =========================
+   MOBILE OPTIMIZATION
+========================= */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .run-controls {
+    width: 100%;
+  }
+}
