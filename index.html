@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sure Sail — Dashboard Preview</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="anchor">⚓</span>
+      <span class="title">Sure Sail</span>
+    </div>
+
+    <div class="run">
+      <span class="label">Run ID:</span>
+      <span class="value" id="runId">TH-00001</span>
+    </div>
+
+    <div class="toggles">
+      <label class="toggle">
+        <input id="neonToggle" type="checkbox" checked />
+        <span>Neon Mode</span>
+      </label>
+
+      <label class="toggle">
+        <input id="audioToggle" type="checkbox" checked />
+        <span>Ocean Audio</span>
+      </label>
+
+      <button id="runBtn" class="btn primary">Run Scan</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <!-- LEFT NAV -->
+    <aside class="nav">
+      <button class="navItem active" data-view="main">Main Page</button>
+      <button class="navItem" data-view="zoneOps">Zone Ops</button>
+      <button class="navItem" data-view="toll">Toll Archive</button>
+      <div class="spacer"></div>
+      <button class="navItem logout">Logout</button>
+    </aside>
+
+    <!-- CENTER: STAGE I -->
+    <section class="panel stage stage1" id="stage1">
+      <div class="stageHeader">
+        <h2>STAGE I — FOUNDATION SCAN</h2>
+        <p>Build the Core Field Map</p>
+      </div>
+
+      <div class="grid2">
+        <div class="box panelBox" data-panel="10cat">
+          <div class="boxHeader">
+            <h3>10 CAT Assessment</h3>
+            <div class="modePills">
+              <span class="pill active" data-mode="doc">📘</span>
+              <span class="pill" data-mode="exec">⚙</span>
+            </div>
+          </div>
+
+          <div class="scale">
+            <div class="row"><span>1</span><span class="dot"></span></div>
+            <div class="row"><span>2</span><span class="dot"></span></div>
+            <div class="row"><span>3</span><span class="dot"></span></div>
+            <div class="row"><span>4</span><span class="dot"></span></div>
+            <div class="row"><span>5</span><span class="dot"></span></div>
+            <div class="row"><span>6</span><span class="dot"></span></div>
+            <div class="row"><span>7</span><span class="dot"></span></div>
+            <div class="finalScore">Final Score: <b id="finalScore">7.8</b></div>
+          </div>
+        </div>
+
+        <div class="box panelBox" data-panel="gss">
+          <div class="boxHeader">
+            <h3>Global SPY Glass</h3>
+            <div class="modePills">
+              <span class="pill active" data-mode="doc">📘</span>
+              <span class="pill" data-mode="exec">⚙</span>
+            </div>
+          </div>
+
+          <button class="btn" id="gssBtn">Run Full Scan</button>
+
+          <div class="checklist">
+            <label><input type="checkbox" checked /> Solana</label>
+            <label><input type="checkbox" checked /> Bitcoin</label>
+            <label><input type="checkbox" checked /> Ethereum</label>
+            <label><input type="checkbox" checked /> Whale Predation</label>
+            <label><input type="checkbox" checked /> Underchain Signals</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="box wide panelBox" data-panel="progress">
+        <div class="boxHeader">
+          <h3>Progress Status</h3>
+          <div class="modePills">
+            <span class="pill active" data-mode="doc">📘</span>
+            <span class="pill" data-mode="exec">⚙</span>
+          </div>
+        </div>
+
+        <div class="bars">
+          <div class="barRow">
+            <span>Foundation Built</span>
+            <div class="bar" id="barFoundation"></div>
+          </div>
+
+          <div class="barRow">
+            <span>Deep Tools Activated</span>
+            <div class="bar" id="barDeep"></div>
+          </div>
+        </div>
+
+        <small class="hint">When executing, panels glow and sequence left→right to show orchestration.</small>
+      </div>
+    </section>
+
+    <!-- RIGHT: STAGE II -->
+    <section class="panel stage stage2" id="stage2">
+      <div class="stageHeader">
+        <h2>STAGE II — DEEP INTELLIGENCE</h2>
+        <p>Unlocks After Foundation</p>
+      </div>
+
+      <div class="unlockNote">
+        <span class="lock">🔒</span>
+        <span>Complete Stage I to activate Stage II tools.</span>
+      </div>
+
+      <div class="toolStack">
+        <button class="tool panelBox" data-panel="hist">
+          <span class="icon">⏳</span>
+          <span class="name">Historical Compare Mode</span>
+          <span class="chev">››</span>
+        </button>
+
+        <button class="tool panelBox" data-panel="micro">
+          <span class="icon">🌊</span>
+          <span class="name">Micro Tide Selection</span>
+          <span class="chev">››</span>
+        </button>
+
+        <button class="tool panelBox" data-panel="th2">
+          <span class="icon">↟↟</span>
+          <span class="name">Twin Horizon II</span>
+          <span class="chev">››</span>
+        </button>
+
+        <button class="tool panelBox" data-panel="mindwake">
+          <span class="icon">👁</span>
+          <span class="name">Mindwake Trigger</span>
+          <span class="chev">››</span>
+        </button>
+
+        <button class="tool panelBox" data-panel="replay">
+          <span class="icon">⟲</span>
+          <span class="name">Replay Mode</span>
+          <span class="tag">EPSD | Z | CM</span>
+          <span class="chev">››</span>
+        </button>
+      </div>
+
+      <div class="box wide panelBox" data-panel="deepProgress">
+        <div class="boxHeader">
+          <h3>Deep Field Activation</h3>
+          <div class="modePills">
+            <span class="pill active" data-mode="doc">📘</span>
+            <span class="pill" data-mode="exec">⚙</span>
+          </div>
+        </div>
+        <div class="barRow">
+          <span>Deep Tools Activated</span>
+          <div class="bar" id="barDeep2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTENT OVERLAY (Zone Ops / etc.) -->
+    <section class="overlay" id="overlay">
+      <div class="overlayCard">
+        <h3 id="overlayTitle">Zone Ops</h3>
+        <div id="overlayBody" class="overlayBody"></div>
+      </div>
+    </section>
+  </main>
+
+  <!-- optional audio; add file later -->
+  <audio id="oceanAudio" preload="auto">
+    <source src="assets/ocean-wave.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
