@@ -1,0 +1,105 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Georgia, serif;
+  background: linear-gradient(to bottom, #efe3c6, #e2d3b3);
+  color: #222;
+  padding: 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  font-size: 32px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* ===== MAIN LAYOUT ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+/* Two-column layout for desktop */
+@media (min-width: 900px) {
+  .dashboard {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== PANELS ===== */
+.panel {
+  background: linear-gradient(to bottom, #f3e6c8, #e6d6b5);
+  border-radius: 18px;
+  padding: 20px;
+  border: 2px solid rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  width: 100%;
+}
+
+.panel h2 {
+  margin-bottom: 10px;
+}
+
+/* ===== BUTTONS ===== */
+button {
+  background: #1e4e4f;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* ===== CHECKBOX SPACING ===== */
+.checkbox-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* ===== NEON MODE ===== */
+.neon .panel {
+  border: 2px solid #00ffe1;
+  box-shadow: 0 0 20px rgba(0,255,225,0.5);
+  transition: 0.4s ease;
+}
+
+/* ===== PROGRESS BARS ===== */
+.progress-bar {
+  height: 16px;
+  background: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 50%;
+  background: linear-gradient(to right, #f2c14e, #f6d365);
+}
